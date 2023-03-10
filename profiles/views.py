@@ -4,4 +4,6 @@ from .models import Profile
 
 
 class ProfileList(APIView):
-    ''
+    def get(self, request):
+        profiles = Profile.objects.all()
+        return Response(profiles)

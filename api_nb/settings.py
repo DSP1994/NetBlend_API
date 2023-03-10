@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
     # made by developer
     'profiles',
+    'posts',
 ]
 
 MIDDLEWARE = [

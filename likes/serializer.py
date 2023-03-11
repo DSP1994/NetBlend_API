@@ -14,7 +14,7 @@ class LikeSerializer(serializers.ModelSerializer):
             'owner',
             'post',
         ]
-    
+
     def create(self, validated_data):
         try:
             return super().create(validated_data)

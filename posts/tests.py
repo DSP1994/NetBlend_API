@@ -55,7 +55,8 @@ class PostDetailViewTest(APITestCase):
 
     def test_user_can_update_any_posts_they_own(self):
         self.client.login(username='david', password='password2')
-        response = self.client.put('/posts/1/', {'title': 'a second test title'})
+        response = self.client.put(
+            '/posts/1/', {'title': 'a second test title'})
         post = Post.objects.filter(pk=1).first()
         self.assertEqual(post.title, 'a second test title')
         self.assertEqual(response.status_code, status.HTTP_200_OK)

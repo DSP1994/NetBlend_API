@@ -1,8 +1,10 @@
+from django.http import Http404
 from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Post
 from .serializers import PostSerializer
+from api_nb.permissions import IsOwnerOrReadOnly
 
 
 class PostList(APIView):
@@ -35,3 +37,8 @@ class PostList(APIView):
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+
+class PostDetail(APIView):
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = PostSerializer

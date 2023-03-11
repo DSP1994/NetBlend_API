@@ -44,14 +44,19 @@ class PostDetailViewTest(APITestCase):
         )
 
     # def test_can_retrieve_post_using_valid_id(self):
-    #     response = self.client.get('/posts/1/')
+    #     response = self.client.get('/posts/2/')
     #     self.assertEqual(response.data['title'], 'test title')
     #     self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    def user_cannot_retrieve_post_with_an_invalid_id(self):
-        response = self.client.get('/posts/666')
-        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+    # def test_user_cannot_retrieve_post_with_an_invalid_id(self):
+    #     response = self.client.get('/posts/666')
+    #     self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    # def user_can_update_any_posts_they_own
+    def test_user_can_update_any_posts_they_own(self):
+        self.client.login(username='dave', password='password')
+        response = self.client.put('/posts/2/', {'title': 'a second test title'})
+        post = Post.objects.filter(pk=1).first()
+        self.assertEqual(post.title, 'a second test title')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-    # def user_cannot_anyone_elses_posts
+    # def test_user_cannot_anyone_elses_posts

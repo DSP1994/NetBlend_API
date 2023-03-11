@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from api_nb.permissions import IsOwnerOrReadOnly
 from likes.models import Like
-from likes.serializer import LikeSerializer
+from likes.serializers import LikeSerializer
 
 
 # Create your views here.

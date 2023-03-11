@@ -33,18 +33,18 @@ from rest_framework.test import APITestCase
 # Detail View Tests
 class PostDetailViewTest(APITestCase):
     def setUp(self):
-        dave = User.objects.create_user(username='dave', password='password2')
+        david = User.objects.create_user(username='david', password='password2')
         brian = User.objects.create_user(
             username='brian', password='password2')
         Post.objects.create(
-            owner=dave, title='test title', content='test content'
+            owner=david, title='test title', content='test content'
         )
         Post.objects.create(
             owner=brian, title='another title', content='test content 2'
         )
 
     # def test_can_retrieve_post_using_valid_id(self):
-    #     response = self.client.get('/posts/2/')
+    #     response = self.client.get('/posts/1/')
     #     self.assertEqual(response.data['title'], 'test title')
     #     self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -52,11 +52,14 @@ class PostDetailViewTest(APITestCase):
     #     response = self.client.get('/posts/666')
     #     self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    def test_user_can_update_any_posts_they_own(self):
-        self.client.login(username='dave', password='password')
-        response = self.client.put('/posts/2/', {'title': 'a second test title'})
-        post = Post.objects.filter(pk=1).first()
-        self.assertEqual(post.title, 'a second test title')
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+    # def test_user_can_update_any_posts_they_own(self):
+    #     self.client.login(username='david', password='password2')
+    #     response = self.client.put('/posts/1/', {'title': 'a second test title'})
+    #     post = Post.objects.filter(pk=1).first()
+    #     self.assertEqual(post.title, 'a second test title')
+    #     self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    # def test_user_cannot_anyone_elses_posts
+    def test_user_cannot_update_another_users_posts(self):
+        self.client.login(username='david', password='password')
+        response = self.client.put('/posts/2/', {'title': 'my new title'})
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)

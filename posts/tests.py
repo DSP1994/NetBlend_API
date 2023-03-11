@@ -26,4 +26,4 @@ class PostListViewTest(APITestCase):
 
     def test_logged_out_user_cannot_create_post(self):
         response = self.client.post('/posts/', {'title': 'test title'})
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)

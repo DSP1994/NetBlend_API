@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post
+from posts.models import Post
 from likes.models import Like
 
 

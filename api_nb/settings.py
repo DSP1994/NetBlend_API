@@ -19,7 +19,7 @@ if os.path.exists('env.py'):
 CLOUDINARY_URL_STORAGE = {
     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
 }
-MEDIA_URL='/media/'
+MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'rest_framework',
     'django_filters',
+    'rest_frameworks.authtoken',
+    'dj_rest_auth',
 
     # made by developer
     'profiles',

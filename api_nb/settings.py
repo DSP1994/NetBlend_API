@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'rest_framework',
     'django_filters',
-    'rest_frameworks.authtoken',
+    'rest_framework.authtoken',
     'dj_rest_auth',
 
     # made by developer

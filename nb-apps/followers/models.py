@@ -15,10 +15,10 @@ class Follower(models.Model):
     created_at = models.DateTimeField(
         auto_now_add=True
         )
-    
+
     class Meta:
         ordering = ['-created_at']
         unique_together = ['owner', 'followed']
-    
+
     def __str__(self):
         return f'{self.owner} {self.followed}'

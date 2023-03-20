@@ -87,11 +87,11 @@ INSTALLED_APPS = [
     'corsheaders',
 
     # made by developer
-    'profiles',
-    'posts',
-    'comments',
-    'likes',
-    'followers',
+    'nb-apps.profiles',
+    'nb-apps.posts',
+    'nb-apps.comments',
+    'nb-apps.likes',
+    'nb-apps.followers',
 ]
 
 SITE_ID = 1

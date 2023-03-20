@@ -1,5 +1,5 @@
 from rest_framework import generics, permissions
-from api_nb.permissions import IsOwnerOrReadOnly
+from ..api_nb.permissions import IsOwnerOrReadOnly
 from likes.models import Like
 from likes.serializers import LikeSerializer
 

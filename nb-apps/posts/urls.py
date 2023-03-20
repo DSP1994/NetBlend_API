@@ -1,5 +1,5 @@
 from django.urls import path
-from posts import views
+from . import views
 
 # url links for posts
 urlpatterns = [

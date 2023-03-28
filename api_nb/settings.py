@@ -94,6 +94,7 @@ INSTALLED_APPS = [
     'nb-apps.likes',
     'nb-apps.followers',
     'nb-apps.events',
+    'nb-apps.article'
 ]
 
 SITE_ID = 1

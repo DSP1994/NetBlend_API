@@ -31,4 +31,5 @@ urlpatterns = [
     path('', include('nb-apps.comments.urls')),
     path('', include('nb-apps.likes.urls')),
     path('', include('nb-apps.followers.urls')),
+    path('', include('nb-apps.events.urls')),
 ]

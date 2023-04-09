@@ -46,6 +46,8 @@
 
 16. As a **user** I would like to **delete my post** so that **I have the freedom to change my content**
 
+---
+
 ### **Comments**
 
 17. As a **user** I would like to **create a comment** so that I can **express my thoughts**

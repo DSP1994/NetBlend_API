@@ -60,7 +60,7 @@ A list of bugs and fixes during the production of the API can be found [HERE](/s
 - Drop the database. Go to the Elephant SQL dashboard, select your database, and select the reset button. Locally, you can just delete the db.sqlite3  file.
 - Run the commands python3 manage.py makemigrations and python3 manage.py migrate to remake migrations and setup the new database.
 
-I then had the unfortunate error in which clearing my cookies wouldn't allow me to access anything on the page. I ended up talking to Oisin, who informed me to click the lock icon on the left hand side of the URL, and manually remove the cookies, and this seemed to resolve the error and I was able to log in normally. 
+- I then had the unfortunate error in which clearing my cookies wouldn't allow me to access anything on the page. I ended up talking to Oisin, who informed me to click the lock icon on the left hand side of the URL, and manually remove the cookies, and this seemed to resolve the error and I was able to log in normally. 
 
 ### Unfixed Bugs
 - N/A
@@ -270,10 +270,10 @@ pip3 freeze --local > requirements.txt
 26. Deployed the branch.
 
 ### Deploy to Render & ElephantSQL:
-* Due to Heroku revoking their frie tier access, the project has been redeployed using (Render)[https://render.com/] & (ElephantSQL)[https://www.elephantsql.com/] using the following [instructions](https://code-institute-students.github.io/deployment-docs/41-pp5-adv-fe/pp5-adv-fe-drf-01-create-a-database)
+* Due to Heroku revoking their frie tier access, the project has been redeployed using (ElephantSQL)[https://www.elephantsql.com/] using the following [instructions](https://code-institute-students.github.io/deployment-docs/41-pp5-adv-fe/pp5-adv-fe-drf-01-create-a-database)
 
 ## **CREDITS**:
 
-### Content:
 - This API database was provided through the step by step guide of the CI DRF-API walkthrough project.
 - An additional two apps along with models, serializers & views have been created by myself.
+- I would like to thank the CI tutors for the continued support throughout both sections of my project. They were of immense help.

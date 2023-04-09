@@ -23,25 +23,25 @@ Netblend is a social media website where the inter**NET** and coffee beans (that
   + [Unfixed Bugs](#unfixed-bugs)
 + [Technologies](#technologies)
   + [Main Language](#main-language)
-  + [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used)
+  + [Frameworks, Libraries & Programs](#frameworks-libraries--programs)
 + [Deployment](#deployment)
 + [Credits](#credits)
   + [Content](#content)
   + [Media](#media)
 
 ## **User Stories:**
-All User Stories can be found [HERE](./static/Userstores.md).
+All User Stories can be found [HERE](/static/Userstories.md).
 
 ## **Database**:
-![SQL Database model]()
+![SQL Database model](/static/Readme-DrawSQL.png)
 
 ## **Testing**:
 ### Validator Testing: 
 All files passed through [PEP8 CI](https://pep8ci.herokuapp.com/) without error.
 
-![PEP8]()
-
 ### Bugs & Fixes
+
+A list of bugs and fixes during the production of the API can be found [HERE](/static/bugs-fixes.md)
 
 ### Manual Testing:
 1. Manually verified each url path created works.
@@ -69,7 +69,7 @@ I then had the unfortunate error in which clearing my cookies wouldn't allow me 
 ### Main Language:
 - Python
 
-### Frameworks, Libraries & Programs Used:
+### Frameworks, Libraries & Programs:
 - Django
 - Django RestFramework
 - Cloudinary

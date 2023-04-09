@@ -52,7 +52,7 @@
 
 18. As a **user** I would like to **see the comment date** so that I can **know if I'm replying to a recent conversation**
 
-19. As a **user** I would like to **view other comments** so that I can **see what others thinki**
+19. As a **user** I would like to **view other comments** so that I can **see what others think**
 
 20. As a **user** I would like to **edit my comment** so that I can **change my mind**
 
